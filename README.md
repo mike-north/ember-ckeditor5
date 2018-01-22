@@ -1,6 +1,6 @@
-# ember-ckeditor
+# Ember CKEditor
 
-This README outlines the details of collaborating on this Ember addon.
+This library is a thin wrapper around the [CKEditor 5](https://docs.ckeditor.com/ckeditor5/latest/index.html) [balloon build](https://docs.ckeditor.com/ckeditor5/latest/builds/guides/overview.html#balloon-editor)
 
 ## Installation
 
