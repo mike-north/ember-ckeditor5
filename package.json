@@ -11,7 +11,7 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/mike-north/ember-ckeditor",
   "scripts": {
     "build": "ember build",
     "deploy": "GH_PAGES=true ember build && GH_PAGES=true ember github-pages:commit --environment development --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\" && git push origin gh-pages:gh-pages",
