@@ -43,4 +43,4 @@ deploy:
       secure: EzJrQMquI97dLNUuZ0w1Gy9pLuKKPvDZl38xpJIkx9y2SOXASD9Kbq+qFSR2KVgiXW9uMDHX9n/V6UWk+e1DBLoqtfoIjNK41V0+WNpfbXujVyf4TG3gkUNAvIWRe+3+R+AgFvVWue9nVLULsHs8MPkLx/tOLeT/kI/7AePVrvXlpuVw+2rL2+g6AwLgbiGCGO7bIZLs5XgtPnq0Jrr+ewaOi2XuXPWc92gJhsi48lGSdzTwOsQjyX2hR4uSgEQEvax1o+S8ABBzmZNVj4LiwHRGyNoJC4Wj0Ckx7WQW2B+VRqSOcUnuPfooLCN/jUkSKRVqPbnfFXJNP6Vp6d0e9l0SXLMsNIFB8NeyOpMjN+vbwgM5n/FYUCEBbDNX4kW1IbAwMzihEr961cPemUuNwUMF1td95ikt4oQAgzZ/JfkTwI+TwjfzvZtHXRrAPL/Ezy06edCQ/sSlbLk1T5zc67ry8Ezgr6k4QptYbLQ+buGC8qRio2EemgnlNnKUTZ69dc+szPGc90JB/XJFumhwPwmeOLjsUuiI/6FSRb19MTWHXRxjZDE5mJQyxVEvxcVk+wXnLwZqDlPZHxH0c/6gMnfuX8wCNfOh7mE3lkmHeujPyqdVSzSz7wQBoo3DgQl0Qmtc9LwibnBb3MMvvZPk9RSoAV9XzKaimxDTCRNqisg=
     on:
       tags: true
-      repo: mike-north/ember-ckeditor
+      repo: mike-north/ember-ckeditor5
