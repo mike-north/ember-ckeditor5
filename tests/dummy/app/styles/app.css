@@ -17,3 +17,7 @@
   color: #fff;
   padding: 10px;
 }
+
+pre {
+  font-family: monospace;
+}

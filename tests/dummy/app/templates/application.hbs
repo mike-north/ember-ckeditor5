@@ -1,15 +1,16 @@
 <h2 id="title">Welcome to CKEditor</h2>
 <div class="well">
   <h3>This is the editor</h3>
-  {{#ck-editor data=htmlVal as |api|}}
+  {{#ck-editor value=htmlVal onChange=(action (mut htmlVal)) as |api|}}
   <button onClick={{api.onSave}}>Save</button>
   {{/ck-editor}} {{outlet}}
 </div>
 
 
+
+
+
 <div class="well">
   <h3>This is the HTML code</h3>
-  <pre>
-    {{htmlVal}}
-  </pre>
+  <textarea cols="80" rows="20" onInput={{action (mut htmlVal) value='target.value' }}>{{htmlVal}} </textarea>
 </div>

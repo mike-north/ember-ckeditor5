@@ -1,4 +1,4 @@
 <div class="editor"></div>
 <div class="editor-footer">
-  {{yield (hash onSave=(action '_onSave') )}}
+  {{yield (hash actions=(hash save=(action '_onSave')) ) }}
 </div>
