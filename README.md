@@ -14,6 +14,22 @@ and then use the `{{ck-editor}}` component in your app. You may also directly ac
 import { BalloonEditor } from 'ember-ckeditor'
 ```
 
+The `{{ck-editor}}` component yields out an object that can be used on a case-by-case basis to provide some UI around the editor
+
+```hbs
+{{#ck-editor value=myHtmlStringValue as |api|}}
+  {{!-- A "save" button --}}
+  <button onClick={{api.actions.save}}>Save</button>
+{{/ck-editor}}
+```
+and if you provide an `onChange` function, it will be called anytime the value is altered
+
+```hbs
+{{ck-editor
+  value=myHtmlStringValue
+  onChange=(action (mut myHtmlStringValue)) }}
+```
+
 # Addon Development
 
 ## Installation
