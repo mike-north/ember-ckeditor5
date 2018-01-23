@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'dummy',
     environment,
@@ -22,6 +22,10 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+  if (process.env.GH_PAGES) {
+    ENV.locationType = 'hash';
+    ENV.rootURL = '/ember-ckeditor/';
+  }
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
@@ -44,8 +48,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.locationType = 'hash';
-    ENV.rootURL = '/ember-ckeditor/';
+
     // here you can enable a production-specific feature
   }
 
