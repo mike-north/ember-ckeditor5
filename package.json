@@ -1,6 +1,6 @@
 {
   "name": "ember-ckeditor5",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "CKEditor 5 (Balloon build) for Ember apps",
   "keywords": [
     "ember-addon"
