@@ -1,24 +1,24 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import {
+  moduleForComponent,
+  test
+} from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
+import wait from 'ember-test-helpers/wait';
 
 moduleForComponent('ck-editor', 'Integration | Component | ck editor', {
   integration: true
 });
 
-test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
-  this.render(hbs`{{ck-editor}}`);
-
-  assert.equal(this.$().text().trim(), '');
-
+test('Initial render', function (assert) {
+  assert.expect(1);
+  let done = assert.async();
   // Template block usage:
-  this.render(hbs`
-    {{#ck-editor}}
-      template block text
-    {{/ck-editor}}
+  this.render(hbs `
+    {{ck-editor data="<h1>Hello World</h1>"}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  wait().then(() => {
+    assert.equal(this.$().text().trim(), 'Hello World');
+    done();
+  });
 });
