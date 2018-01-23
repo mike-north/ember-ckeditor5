@@ -14,7 +14,7 @@
   "repository": "",
   "scripts": {
     "build": "ember build",
-    "deploy": "GH_PAGES=true ember build && ember github-pages:commit --environment development --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\" && git push origin gh-pages:gh-pages",
+    "deploy": "GH_PAGES=true ember build && GH_PAGES=true ember github-pages:commit --environment development --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\" && git push origin gh-pages:gh-pages",
     "lint:js": "eslint ./*.js addon addon-test-support app config lib server test-support tests",
     "start": "ember serve",
     "test": "ember try:each"
