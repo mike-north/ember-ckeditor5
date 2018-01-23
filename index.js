@@ -13,6 +13,5 @@ module.exports = {
     }
     this.app = app;
     app.import(require.resolve('@ckeditor/ckeditor5-build-balloon'));
-
   }
 };
