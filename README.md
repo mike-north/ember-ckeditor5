@@ -7,13 +7,13 @@ This library is a thin wrapper around the [CKEditor 5](https://docs.ckeditor.com
 To install this addon, run 
 
 ```sh
-ember install ember-ckeditor
+ember install ember-ckeditor5
 ```
 
 and then use the `{{ck-editor}}` component in your app. You may also directly access the `Balloon Editor` module by importing it
 
 ```js
-import { BalloonEditor } from 'ember-ckeditor'
+import { BalloonEditor } from 'ember-ckeditor5'
 ```
 
 The `{{ck-editor}}` component yields out an object that can be used on a case-by-case basis to provide some UI around the editor
