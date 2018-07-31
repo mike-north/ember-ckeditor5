@@ -22,7 +22,7 @@
   "dependencies": {
     "@ckeditor/ckeditor5-build-balloon": "^1.0.0-alpha.2",
     "ember-cli-babel": "^6.6.0",
-    "ember-cli-htmlbars": "^2.0.1"
+    "ember-cli-htmlbars": "^3.0.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
