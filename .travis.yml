@@ -8,39 +8,15 @@ addons:
 before_script:
   - sudo chown root /opt/google/chrome/chrome-sandbox
   - sudo chmod 4755 /opt/google/chrome/chrome-sandbox
-cache:
-  directories:
-    - '$HOME/.npm'
 
 env:
   global:
     # See https://git.io/vdao3 for details.
     - JOBS=1
-matrix:
-  fast_finish: true
-  allow_failures:
-    - env: EMBER_TRY_SCENARIO=ember-canary
 
-before_install:
-  - npm config set spin false
-  - npm install -g npm@4
-  - npm --version
 script:
-  - npm run lint:js
+  - yarn lint:js
   - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO --skip-cleanup
-deploy:
-  - provider: script
-    script: scripts/deploy.sh
-    on:
-      branch: master
-      if: EMBER_TRY_SCENARIO = ember-release
-  - provider: npm
-    email: michael.l.north@gmail.com
-    api_key:
-      secure: EzJrQMquI97dLNUuZ0w1Gy9pLuKKPvDZl38xpJIkx9y2SOXASD9Kbq+qFSR2KVgiXW9uMDHX9n/V6UWk+e1DBLoqtfoIjNK41V0+WNpfbXujVyf4TG3gkUNAvIWRe+3+R+AgFvVWue9nVLULsHs8MPkLx/tOLeT/kI/7AePVrvXlpuVw+2rL2+g6AwLgbiGCGO7bIZLs5XgtPnq0Jrr+ewaOi2XuXPWc92gJhsi48lGSdzTwOsQjyX2hR4uSgEQEvax1o+S8ABBzmZNVj4LiwHRGyNoJC4Wj0Ckx7WQW2B+VRqSOcUnuPfooLCN/jUkSKRVqPbnfFXJNP6Vp6d0e9l0SXLMsNIFB8NeyOpMjN+vbwgM5n/FYUCEBbDNX4kW1IbAwMzihEr961cPemUuNwUMF1td95ikt4oQAgzZ/JfkTwI+TwjfzvZtHXRrAPL/Ezy06edCQ/sSlbLk1T5zc67ry8Ezgr6k4QptYbLQ+buGC8qRio2EemgnlNnKUTZ69dc+szPGc90JB/XJFumhwPwmeOLjsUuiI/6FSRb19MTWHXRxjZDE5mJQyxVEvxcVk+wXnLwZqDlPZHxH0c/6gMnfuX8wCNfOh7mE3lkmHeujPyqdVSzSz7wQBoo3DgQl0Qmtc9LwibnBb3MMvvZPk9RSoAV9XzKaimxDTCRNqisg=
-    on:
-      tags: true
-      repo: mike-north/ember-ckeditor5
 
 stages:
   - basic test
@@ -54,4 +30,5 @@ jobs:
       env: EMBER_TRY_SCENARIO=ember-lts-2.12
     - env: EMBER_TRY_SCENARIO=ember-lts-2.16
     - env: EMBER_TRY_SCENARIO=ember-beta
+  allow_failures:
     - env: EMBER_TRY_SCENARIO=ember-canary
