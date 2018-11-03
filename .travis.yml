@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- '6'
+- 'stable'
 sudo: false
 dist: trusty
 addons:
@@ -44,3 +44,18 @@ deploy:
     on:
       tags: true
       repo: mike-north/ember-ckeditor5
+
+
+stages:
+  - basic test
+  - additional tests
+jobs:
+  fail_fast: true
+  include:
+  - stage: basic test
+    env: EMBER_TRY_SCENARIO=ember-release
+  - stage: additional tests
+    env: EMBER_TRY_SCENARIO=ember-lts-2.12
+  - env: EMBER_TRY_SCENARIO=ember-lts-2.16
+  - env: EMBER_TRY_SCENARIO=ember-beta
+  - env: EMBER_TRY_SCENARIO=ember-canary
