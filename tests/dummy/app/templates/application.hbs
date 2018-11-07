@@ -2,7 +2,9 @@
 <div class="well">
   <h3>This is the editor</h3>
   {{#ck-editor value=htmlVal onChange=(action (mut htmlVal)) as |api|}}
-  <button onClick={{api.onSave}}>Save</button>
+    <button onClick={{api.onSave}}>
+      Save
+    </button>
   {{/ck-editor}} {{outlet}}
 </div>
 
@@ -12,5 +14,11 @@
 
 <div class="well">
   <h3>This is the HTML code</h3>
-  <textarea cols="80" rows="20" onInput={{action (mut htmlVal) value='target.value' }}>{{htmlVal}} </textarea>
+  {{! template-lint-disable attribute-indentation }}
+  <textarea
+    onInput={{action (mut htmlVal) value="target.value" }}
+    cols="80"
+    rows="20">
+    {{htmlVal}}
+  </textarea>
 </div>

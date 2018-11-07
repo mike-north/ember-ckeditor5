@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	name: 'ember-ckeditor',
+	name: 'ember-ckeditor5',
 	included(appOrAddon) {
 		this._super.included(appOrAddon);
 		let app = appOrAddon;

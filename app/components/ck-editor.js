@@ -1,1 +1,1 @@
-export { default } from 'ember-ckeditor/components/ck-editor';
+export { default } from 'ember-ckeditor5/components/ck-editor';
