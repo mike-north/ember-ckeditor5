@@ -1,4 +1,4 @@
-/* eslnt-env node */
+/* eslint-env node */
 module.exports = {
 	root: true,
 	parserOptions: {
