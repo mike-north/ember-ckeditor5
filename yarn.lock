@@ -604,10 +604,10 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@ckeditor/ckeditor5-build-balloon@^1.0.0-beta.4":
-  version "1.0.0-beta.4"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-build-balloon/-/ckeditor5-build-balloon-1.0.0-beta.4.tgz#d211f970c904dc661ec868df5bc0fc9de8be7822"
-  integrity sha1-0hH5cMkE3GYeyGjfW8D8nei+eCI=
+"@ckeditor/ckeditor5-build-balloon@^11.0.0":
+  version "11.1.1"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-build-balloon/-/ckeditor5-build-balloon-11.1.1.tgz#c6a6e55e49a0f2bf6487833efbea7e68441eda05"
+  integrity sha512-AxYAfwyFbR22H4TkhrBRfQFtqXtHpaHkYatSbpQt051zcbBwTzOEJi7wo7S73ACqVqXmuDEsOCEuEfUhrwa8Mw==
 
 "@commitlint/cli@7.2.1", "@commitlint/cli@^7.2.1":
   version "7.2.1"
