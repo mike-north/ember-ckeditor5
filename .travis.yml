@@ -14,6 +14,12 @@ env:
     # See https://git.io/vdao3 for details.
     - JOBS=1
 
+stages:
+  - 'Tests'
+  - 'Additional Tests'
+  - name: 'Deploy'
+    if: branch = master AND type = push
+
 jobs:
   fail_fast: true
   allow_failures:
@@ -23,11 +29,16 @@ jobs:
     # runs linting and tests with current locked deps
 
     - stage: 'Tests'
-      name: 'Tests'
+      name: 'Fixed Dependencies'
+      install:
+        - yarn install --non-interactive
       script:
         - yarn lint:hbs
         - yarn lint:js
-        - npm test
+        - yarn test
+    - name: 'Floating Dependencies'
+      script:
+        - yarn test
 
     # we recommend new addons test the current and previous LTS
     # as well as latest stable release (bonus points to beta/canary)
@@ -39,7 +50,11 @@ jobs:
     - env: EMBER_TRY_SCENARIO=ember-canary
     - env: EMBER_TRY_SCENARIO=ember-default-with-jquery
 
-    - JOBS=1
+    - stage: 'Deploy'
+      name: 'Publish to npm'
+      install:
+        - yarn install --non-interactive
+      script: yarn semantic-release
 
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
