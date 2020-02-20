@@ -802,10 +802,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@ckeditor/ckeditor5-build-balloon@^12.0.0":
-  version "12.4.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-build-balloon/-/ckeditor5-build-balloon-12.4.0.tgz#8c955129b9b5a428d7dfce25758140ba327efd7b"
-  integrity sha512-npT1nhRQJxFbHw7GPd7pDXfRrt/o0HmhdlEKQjo7v7i9u4PnWpGa1+nugRN/8pg4+bfXmw6vZTOZbsYY9W59Mw==
+"@ckeditor/ckeditor5-build-balloon@^17.0.0":
+  version "17.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-build-balloon/-/ckeditor5-build-balloon-17.0.0.tgz#a3f0ed1a4ef34ddd185efbe276aa9d822d67d283"
+  integrity sha512-tDeABteXKiSghggb9+mghEnP5zERce7CirOXLNVPRI1DyfxAezN2W2NN7H7LfkPuEJjPhMzOnOK45TDu6wzAEw==
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.3"
